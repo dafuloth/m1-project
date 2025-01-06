@@ -2,6 +2,15 @@
 
 This project imagines a local music and events venue _Lilac Lounge_ who would like to have a new website in order to better promote the business and have more customers. The MVP created for this project consists of a landing page, a gallery, and a contact form.
 
+- [Milestone 1 Project: Lilac Lounge](#milestone-1-project-lilac-lounge)
+  - [UX](#ux)
+    - [Project goals](#project-goals)
+      - [`Customer` goals](#customer-goals)
+      - [`Patron` goals](#patron-goals)
+      - [Business goals](#business-goals)
+      - [User Stories](#user-stories)
+
+
 ## UX
 
 ### Project goals
