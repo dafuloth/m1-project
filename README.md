@@ -1,17 +1,16 @@
 # Milestone 1 Project: Lilac Lounge
 
-This project imagines a local music and events venue _Lilac Lounge_ who would like to have a new website in order to better promote the business and have more customers. The MVP created for this project consists of a landing page, a gallery, and a contact form.
+This project imagines a local music and events venue _Lilac Lounge_ who would like to have a new website in order to better promote the business and have more customers.
 
 ## Contents
 
-- [UX](#ux)
-  - [Project goals](#project-goals)
-    - [`Customer` goals](#customer-goals)
-    - [`Patron` goals](#patron-goals)
-    - [Business goals](#business-goals)
-    - [User Stories](#user-stories)
+- [Project goals](#project-goals)
+  - [`Customer` goals](#customer-goals)
+  - [`Patron` goals](#patron-goals)
+  - [Business goals](#business-goals)
+  - [User Stories](#user-stories)
 
-## UX
+## User Experience (UX)
 
 ### Project goals
 
@@ -34,14 +33,13 @@ Customer goals are:
 
 Beginning on the home page, the customer can see the upcoming events at the _Lilac Lounge_ which can help to give them an idea of kind of _vibe_ they may find.
 
-Right after the events calendar there is a call-to-action directed at customers: a link to the Contact Us page that the customer can click if their interest is piqued.
+Right after the events calendar there is a call-to-action directed at customers: a link to the Contact form that the customer can click if their interest is piqued.
 
 The website will help the customer to achieve these goals because:
 
-- the "Contact Us" page is clearly signposted on the home page, in addition to being linked to from the navigation bar
-- information about the venue is summarised preceding the contact form on the "Contact Us" page
-- the contact form is conveniently available there, for the customer to make further enquiries
+- information about the venue is summarised on a dedicated _About Us_ page
 - The Gallery will contain event photography showcasing the venue in action, which can serve to present the _Lilac Lounge_ as a well run popular venue
+- the Contact form is easily accessed as a modal from any page of the website
 
 #### `Patron` goals
 
@@ -90,3 +88,14 @@ As a patron, I want to:
 1. know what's on at the _Lilac Lounge_
 2. know how to get to the venue
 3. be reassured that I'll have a good time
+
+## Design
+
+### The contact form
+
+Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I realised that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
+
+The benefit of using a modal for the contact form is that the user is not navigated away from the site content, and nor would they need to manually return to the originating page. Thus the user may be encouraged to continue exploring the website. Meanwhile, a separate contact form _page_ does not offer anything else besides a contact form which could prematurely signal the end of the user journey.
+
+#### DRYing the contact form
+It should be possible to access the contact form modal on any page of the website. In order to avoid duplicating the code of the contact form on every page, the HTML of the contact form is stored in the file `contact.html` and loaded dynamically using JavaScript wherever it is required.
