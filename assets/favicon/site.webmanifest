@@ -1,6 +1,6 @@
 {
     "name": "Lilac Lounge",
-    "short_name": "LilacLounge",
+    "short_name": "Lilac Lounge",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "/m1-project/index.html",
     "theme_color": "#D891EF",
     "background_color": "#4D356E",
     "display": "standalone"
