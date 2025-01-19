@@ -189,6 +189,30 @@ It should be possible to access the contact form modal on any page of the websit
 
 ## Testing
 
+### General testing
+
+#### JavaScript to load contact form
+
+The small snippet of JavaScript used to load the contact form was tested manually ensuring that contact form links correctly open the contact form in a modal
+
+#### Favicon visibility
+
+When adding the favicon I soon realised that the combination of colours used would result in low contrast and poor visibility - especially at the small size displayed beside the page title:
+
+<figure style="text-align: center;">
+  <img src="assets/docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
+  <figcaption style="font-size:75%">Original favicon as it appears on the browser tab</figcaption>
+</figure>
+
+I therefore created a new version that would be clearer and easier to see at a small size, still adhering to the colour palette:
+
+|                Old favicon                 |                New favicon                 |
+| :----------------------------------------: | :----------------------------------------: |
+| ![old version of the favicon][old-favicon] | ![new version of the favicon][new-favicon] |
+
+[old-favicon]: assets/docs/readme-images/old-favicon.png
+[new-favicon]: assets/docs/readme-images/new-favicon.png
+
 ## GitHub Deployment
 
 ### GitHub Pages
