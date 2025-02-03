@@ -46,7 +46,7 @@ This project imagines a local music and events venue _Lilac Lounge_ who would li
     </details>
 
 4.  <details open>
-      <summary><a href="#testing">Testing</a></summary>
+      <summary><a href="#testing-troubleshooting-and-bug-fixing">Testing, Troubleshooting, and Bug Fixing</a></summary>
 
     </details>
 
@@ -211,7 +211,7 @@ It should be possible to access the contact form modal on any page of the websit
 - [Coolors](https://coolors.co/)
   - Creating color pallettes.
 
-## Testing
+## Testing, Troubleshooting, and Bug Fixing
 
 ### General testing
 
@@ -237,9 +237,23 @@ I therefore created a new version that would be clearer and easier to see at a s
 [old-favicon]: assets/docs/readme-images/old-favicon.png
 [new-favicon]: assets/docs/readme-images/new-favicon.png
 
+### Troubleshooting and Bug-Fixing
+
+#### Google Fonts
+
+|                                                               |                                                                |
+| :------------------------------------------------------------ | :------------------------------------------------------------: |
+| **Issue**: Serif font being used instead of the imported font |       ![Imported font not being used][logo-text-problem]       |
+| **Cause**: `@import` not at the top of the CSS file           | ![Incorrect location of CSS import rule][incorrect-css-import] |
+| **Fix**: Move @import rule to top of CSS file                 |  ![@import rule moved to top of CSS file][correct-css-import]  |
+| **Result**: Imported font takes effect                        |    ![Import font is now correctly applied][logo-text-fixed]    |
+
+[logo-text-problem]: assets/docs/readme-images/incorrect-logo-text-font.png
+[incorrect-css-import]: assets/docs/readme-images/incorrect-css-import.png
+[correct-css-import]: assets/docs/readme-images/correct-css-import.png
+[logo-text-fixed]: assets/docs/readme-images/correct-logo-text-font.png
+
 ### As a Progressive web app
-
-
 
 ## GitHub Deployment
 
