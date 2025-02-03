@@ -1,0 +1,93 @@
+/* Asterisk wildcard selector to override default styles added by the browser */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Defining the colors the site will use */
+/* 
+    Violet  #D891EF;
+    Dark Violet #4D356E; 
+    Pale Purple #ECDEFF;
+    Mauve #D8BDFF;
+    White #FFFFFF;
+*/
+
+.color-violet {
+    color: #D891EF;
+}
+
+.color-darkViolet {
+    color: #4D356E;
+}
+
+.color-palePurple {
+    color: #ECDEFF;
+}
+
+.color-mauve {
+    color: #D8BDFF;
+}
+
+.color-white {
+    color: #FFFFFF;
+}
+
+
+.bgcolor-violet {
+    background-color: #D891EF;
+}
+
+.bgcolor-darkViolet {
+    background-color: #4D356E;
+}
+
+.bgcolor-palePurple {
+    background-color: #ECDEFF;
+}
+
+.bgcolor-mauve {
+    background-color: #D8BDFF;
+}
+
+.bgcolor-white {
+    background-color: #FFFFFF;
+}
+
+
+.bg-color-primary {
+    background-color: #4D356E;
+}
+
+/* Navbar links */
+#navbarSupportedContent>ul>li>a {
+    color: #ECDEFF;
+}
+
+#navbarSupportedContent>ul>li>a:hover {
+    color: #FFFFFF;
+}
+
+#navbarSupportedContent>ul>li>a.active {
+    font-weight: bold;
+}
+
+
+#nav-toggle {
+    color: #D8BDFF;
+}
+
+#nav-toggle:hover {
+    border-color: #FFFFFF;
+}
+
+#nav-toggle.navbar-toggler {
+    border-color: #D891EF;
+}
+
+/* Customise colour of the toggler icon: set stroke to site violet colour #D891EF using rgb values (216, 145, 239) */
+#nav-toggle.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28216, 145, 239, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
