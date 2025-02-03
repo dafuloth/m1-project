@@ -140,11 +140,35 @@ As a patron, I want to:
 
 ### Colours
 
+<table style="border: 1px solid grey; border-collapse: collapse; font-family: monospace; margin: 0 auto">
+  <tr>
+    <th style="text-align: center;">Violet</th>
+    <th style="text-align: center;">Dark violet</th>
+    <th style="text-align: center;">Pale Purple</th>
+    <th style="text-align: center;">Mauve</th>
+    <th style="text-align: center;">White</th>
+  </tr>
+  <tr style="height: 4em;">
+    <td style="background-color: #d891ef"></td>
+    <td style="background-color: #4d356e"></td>
+    <td style="background-color: #ecdeff"></td>
+    <td style="background-color: #d8bdff"></td>
+    <td style="background-color: #ffffff"></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">#d891ef</td>
+    <td style="text-align: center;">#4d356e</td>
+    <td style="text-align: center;">#ecdeff</td>
+    <td style="text-align: center;">#d8bdff</td>
+    <td style="text-align: center;">#ffffff</td>
+  </tr>
+</table>
+
 ## Features
 
 ### The contact form
 
-Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I realised that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
+Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I decided that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
 
 The benefit of using a modal for the contact form is that the user is not navigated away from the site content, and nor would they need to manually return to the originating page. Thus the user may be encouraged to continue exploring the website. Meanwhile, a separate contact form _page_ does not offer anything else besides a contact form which could prematurely signal the end of the user journey.
 
@@ -197,7 +221,7 @@ The small snippet of JavaScript used to load the contact form was tested manuall
 
 #### Favicon visibility
 
-When adding the favicon I soon realised that the combination of colours used would result in low contrast and poor visibility - especially at the small size displayed beside the page title:
+When adding the favicon I soon realised that the combination of colours used would result in low contrast and poor visibility:
 
 <figure style="text-align: center;">
   <img src="assets/docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
@@ -212,6 +236,10 @@ I therefore created a new version that would be clearer and easier to see at a s
 
 [old-favicon]: assets/docs/readme-images/old-favicon.png
 [new-favicon]: assets/docs/readme-images/new-favicon.png
+
+### As a Progressive web app
+
+
 
 ## GitHub Deployment
 
@@ -262,6 +290,14 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ### Credits
+
+#### Code
+
+[web.dev: Add a web app manifest](https://web.dev/articles/add-manifest)
+was helpful for working with the `site.webmanifest` file that accompanies the favicon files produced by favicon.io.
+
+[maximorlov.com: Deploying to Github Pages? Don't Forget to Fix Your Links
+](https://maximorlov.com/deploying-to-github-pages-dont-forget-to-fix-your-links/) was helpful for correcting the paths in `site.webmanifest`
 
 #### Media
 
