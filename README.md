@@ -247,7 +247,7 @@ I therefore created a new version that would be clearer and easier to see at a s
 
 #### Preventing "flash of unstyled text"
 
-This is an issue that comes under general testing as it is not a bug per se. By default the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is first displayed in the serif fallback font until the custom font has been downloaded and becomes available, i.e. _flash of unstyled text_.
+This is an issue that comes under general testing as it is not a bug per se. By default the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is immediately displayed in the serif fallback font because the custom font needs to be downloaded and then the text font is swapped for the downloaded one, i.e. _flash of unstyled text_.
 
 As this could be distracting the property has been set to `fallback` instead. In this case the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
 
