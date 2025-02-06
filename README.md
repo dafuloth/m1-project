@@ -166,6 +166,14 @@ As a patron, I want to:
 
 ## Features
 
+### Navigation bar
+
+The responsive navigation bar for the website has been implement via the Bootstrap `navbar` which has been styled according to the design.
+
+#### Logo
+
+The navbar may display a logo on its far left. Currently in its place is a text logo, in the form of the name of business written in the imported _Dynalight_ Google Font. Since it is supposed to a logo, text selection has been disabled via CSS.
+
 ### The contact form
 
 Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I decided that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
@@ -237,6 +245,8 @@ I therefore created a new version that would be clearer and easier to see at a s
 [old-favicon]: assets/docs/readme-images/old-favicon.png
 [new-favicon]: assets/docs/readme-images/new-favicon.png
 
+### As a Progressive web app
+
 ### Troubleshooting and Bug-Fixing
 
 #### Google Fonts
@@ -252,8 +262,6 @@ I therefore created a new version that would be clearer and easier to see at a s
 [incorrect-css-import]: assets/docs/readme-images/incorrect-css-import.png
 [correct-css-import]: assets/docs/readme-images/correct-css-import.png
 [logo-text-fixed]: assets/docs/readme-images/correct-logo-text-font.png
-
-### As a Progressive web app
 
 ## GitHub Deployment
 
@@ -312,6 +320,8 @@ was helpful for working with the `site.webmanifest` file that accompanies the fa
 
 [maximorlov.com: Deploying to Github Pages? Don't Forget to Fix Your Links
 ](https://maximorlov.com/deploying-to-github-pages-dont-forget-to-fix-your-links/) was helpful for correcting the paths in `site.webmanifest`
+
+[How To Disable Text Selection in HTML/CSS](https://www.w3schools.com/howto/howto_css_disable_text_selection.asp)
 
 #### Media
 

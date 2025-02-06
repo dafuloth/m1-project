@@ -97,4 +97,8 @@
 
 #logo {
     font-family: "Dynalight", serif;
+    color: #ECDEFF;
+
+    /* Prevent text selection of logo text */
+    user-select: none;
 }
