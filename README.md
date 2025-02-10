@@ -1,4 +1,4 @@
-# Milestone 1 Project: <span style="color:#D891EF; background-color:#4D356E;padding: 5px">Lilac Lounge</span>
+# Milestone 1 Project: Lilac Lounge
 
 This project imagines a local music and events venue _Lilac Lounge_ who would like to have a new website in order to better promote the business and have more customers.
 
@@ -140,29 +140,9 @@ As a patron, I want to:
 
 ### Colours
 
-<table style="border: 1px solid grey; border-collapse: collapse; font-family: monospace; margin: 0 auto">
-  <tr>
-    <th style="text-align: center;">Violet</th>
-    <th style="text-align: center;">Dark violet</th>
-    <th style="text-align: center;">Pale Purple</th>
-    <th style="text-align: center;">Mauve</th>
-    <th style="text-align: center;">White</th>
-  </tr>
-  <tr style="height: 4em;">
-    <td style="background-color: #d891ef"></td>
-    <td style="background-color: #4d356e"></td>
-    <td style="background-color: #ecdeff"></td>
-    <td style="background-color: #d8bdff"></td>
-    <td style="background-color: #ffffff"></td>
-  </tr>
-  <tr>
-    <td style="text-align: center;">#d891ef</td>
-    <td style="text-align: center;">#4d356e</td>
-    <td style="text-align: center;">#ecdeff</td>
-    <td style="text-align: center;">#d8bdff</td>
-    <td style="text-align: center;">#ffffff</td>
-  </tr>
-</table>
+![Lilac Lounge colours](assets/docs/readme-images/lilac-lounge-colorxs.png)
+
+[Link to palette on colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff)
 
 ## Features
 
@@ -172,7 +152,7 @@ The responsive navigation bar for the website has been implement via the Bootstr
 
 #### Logo
 
-The navbar may display a logo on its far left. Currently in its place is a text logo, in the form of the name of business written in the imported _Dynalight_ Google Font. Since it is supposed to a logo, text selection has been disabled via CSS.
+On the far left of the navbar we may choose to display a image as a logo. Currently in its place is a text logo, in the form of the name of business written in the imported _Dynalight_ Google Font. Since it is supposed to a logo, text selection has been disabled via CSS.
 
 ### The contact form
 
@@ -210,14 +190,11 @@ It should be possible to access the contact form modal on any page of the websit
 
 - [favicon.io](https://favicon.io/): to produce an initial version of the favicon, and ultimately to generate the favicon image files that would be used to implement the favicon
 - [Figma](https://www.figma.com/): to create a revised version of the favicon, export it to a file that I then uploaded to favicon.io to generate favicon image files
-- [Balsamiq](https://balsamiq.com/)
-  - To create wireframes.
+- [Balsamiq](https://balsamiq.com/) to create wireframes.
 - [Favicon Generator](https://www.favicon-generator.org/)
-  - Favicons
-- [Mockup Generator](https://techsini.com/multi-mockup/index.php)
-  - For device mockup images.
-- [Coolors](https://coolors.co/)
-  - Creating color pallettes.
+- [Mockup Generator](https://techsini.com/multi-mockup/index.php) for device mockup images.
+- [colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff)
+  - Generating and visualising color palettes
 
 ## Testing, Troubleshooting, and Bug Fixing
 
@@ -231,7 +208,7 @@ The small snippet of JavaScript used to load the contact form was tested manuall
 
 When adding the favicon I soon realised that the combination of colours used would result in low contrast and poor visibility:
 
-<figure style="text-align: center;">
+<figure>
   <img src="assets/docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
   <figcaption style="font-size:75%">Original favicon as it appears on the browser tab</figcaption>
 </figure>
@@ -258,11 +235,11 @@ As this could be distracting the property has been set to `fallback` instead. In
 #### Google Fonts
 
 |                                                               |                                                                |
-| :------------------------------------------------------------ | :------------------------------------------------------------: |
+| :-----------------------------------------------------------: | :------------------------------------------------------------: |
 | **Issue**: Serif font being used instead of the imported font |       ![Imported font not being used][logo-text-problem]       |
-| **Cause**: `@import` not at the top of the CSS file           | ![Incorrect location of CSS import rule][incorrect-css-import] |
-| **Fix**: Move @import rule to top of CSS file                 |  ![@import rule moved to top of CSS file][correct-css-import]  |
-| **Result**: Imported font takes effect                        |    ![Import font is now correctly applied][logo-text-fixed]    |
+|      **Cause**: `@import` not at the top of the CSS file      | ![Incorrect location of CSS import rule][incorrect-css-import] |
+|         **Fix**: Move @import rule to top of CSS file         |  ![@import rule moved to top of CSS file][correct-css-import]  |
+|            **Result**: Imported font takes effect             |    ![Import font is now correctly applied][logo-text-fixed]    |
 
 [logo-text-problem]: assets/docs/readme-images/incorrect-logo-text-font.png
 [incorrect-css-import]: assets/docs/readme-images/incorrect-css-import.png
