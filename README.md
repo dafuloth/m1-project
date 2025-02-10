@@ -140,7 +140,7 @@ As a patron, I want to:
 
 ### Colours
 
-![Lilac Lounge colours](assets/docs/readme-images/lilac-lounge-colorxs.png)
+![Lilac Lounge colours](docs/readme-images/lilac-lounge-colorxs.png)
 
 [Link to palette on colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff)
 
@@ -209,7 +209,7 @@ The small snippet of JavaScript used to load the contact form was tested manuall
 When adding the favicon I soon realised that the combination of colours used would result in low contrast and poor visibility:
 
 <figure>
-  <img src="assets/docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
+  <img src="docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
   <figcaption style="font-size:75%">Original favicon as it appears on the browser tab</figcaption>
 </figure>
 
@@ -219,8 +219,8 @@ I therefore created a new version that would be clearer and easier to see at a s
 | :----------------------------------------: | :----------------------------------------: |
 | ![old version of the favicon][old-favicon] | ![new version of the favicon][new-favicon] |
 
-[old-favicon]: assets/docs/readme-images/old-favicon.png
-[new-favicon]: assets/docs/readme-images/new-favicon.png
+[old-favicon]: docs/readme-images/old-favicon.png
+[new-favicon]: docs/readme-images/new-favicon.png
 
 #### Preventing "flash of unstyled text"
 
@@ -241,10 +241,10 @@ As this could be distracting the property has been set to `fallback` instead. In
 |         **Fix**: Move @import rule to top of CSS file         |  ![@import rule moved to top of CSS file][correct-css-import]  |
 |            **Result**: Imported font takes effect             |    ![Import font is now correctly applied][logo-text-fixed]    |
 
-[logo-text-problem]: assets/docs/readme-images/incorrect-logo-text-font.png
-[incorrect-css-import]: assets/docs/readme-images/incorrect-css-import.png
-[correct-css-import]: assets/docs/readme-images/correct-css-import.png
-[logo-text-fixed]: assets/docs/readme-images/correct-logo-text-font.png
+[logo-text-problem]: docs/readme-images/incorrect-logo-text-font.png
+[incorrect-css-import]: docs/readme-images/incorrect-css-import.png
+[correct-css-import]: docs/readme-images/correct-css-import.png
+[logo-text-fixed]: docs/readme-images/correct-logo-text-font.png
 
 ## GitHub Deployment
 
