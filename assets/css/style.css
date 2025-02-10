@@ -11,22 +11,22 @@
 
 /* Defining the colors the site will use */
 /* 
-    Violet  #D891EF;
-    Dark Violet #4D356E; 
-    Pale Purple #ECDEFF;
+    Bright Lilac  #D891EF;
+    Dark Slate Blue #4D356E; 
+    White Violet #ECDEFF;
     Mauve #D8BDFF;
     White #FFFFFF;
 */
 
-.color-violet {
+.color-bright-lilac {
     color: #D891EF;
 }
 
-.color-darkViolet {
+.color-darkSlateBlue {
     color: #4D356E;
 }
 
-.color-palePurple {
+.color-whiteViolet {
     color: #ECDEFF;
 }
 
@@ -112,4 +112,10 @@ main {
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
+}
+
+/* Footer */
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
 }
