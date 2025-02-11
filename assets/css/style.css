@@ -1,5 +1,5 @@
 /* Import the Dynalight font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dynalight&display=fallback');
+@import url("https://fonts.googleapis.com/css2?family=Dynalight&display=fallback");
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 
@@ -9,81 +9,44 @@
     box-sizing: border-box;
 }
 
-/* Defining the colors the site will use */
+/* Colour palette: */
 /* 
-    Bright Lilac  #D891EF;
-    Dark Slate Blue #4D356E; 
-    White Violet #ECDEFF;
-    Mauve #D8BDFF;
-    White #FFFFFF;
+    Bright Lilac color: #D891EF;
+    Dark Slate Blue color: #4D356E; 
+    White Violet color: #ECDEFF;
+    Mauve color: #D8BDFF;
+    White color: #FFFFFF;
 */
 
-.color-bright-lilac {
-    color: #D891EF;
-}
-
-.color-darkSlateBlue {
-    color: #4D356E;
-}
-
-.color-whiteViolet {
+#logo {
+    font-family: "Dynalight", serif;
     color: #ECDEFF;
-}
+    font-size: 200%;
 
-.color-mauve {
-    color: #D8BDFF;
-}
-
-.color-white {
-    color: #FFFFFF;
-}
-
-
-.bgcolor-bright-lilac {
-    background-color: #D891EF;
-}
-
-.bgcolor-darkSlateBlue {
-    background-color: #4D356E;
-}
-
-.bgcolor-whiteViolet {
-    background-color: #ECDEFF;
-}
-
-.bgcolor-mauve {
-    background-color: #D8BDFF;
-}
-
-.bgcolor-white {
-    background-color: #FFFFFF;
-}
-
-
-.bg-color-primary {
-    background-color: #4D356E;
+    /* Prevent text selection of logo text */
+    user-select: none;
 }
 
 /* Navbar links */
-#navbarSupportedContent>ul>li>a {
+
+.navbar {
+    background-color: #4D356E;
+}
+
+#menu a {
     color: #ECDEFF;
 }
 
-#navbarSupportedContent>ul>li>a:hover {
+#menu a:hover {
     color: #FFFFFF;
 }
 
-#navbarSupportedContent>ul>li>a.active {
+#menu a.active {
     font-weight: bold;
 }
 
-
 #nav-toggle {
     color: #D8BDFF;
-}
-
-#nav-toggle:hover {
-    border-color: #FFFFFF;
 }
 
 #nav-toggle.navbar-toggler {
@@ -93,14 +56,6 @@
 /* Customise colour of the toggler icon: set stroke to site violet colour #D891EF using rgb values (216, 145, 239) */
 #nav-toggle.navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28216, 145, 239, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-#logo {
-    font-family: "Dynalight", serif;
-    color: #ECDEFF;
-
-    /* Prevent text selection of logo text */
-    user-select: none;
 }
 
 /* Main content */
@@ -115,7 +70,32 @@ main {
 }
 
 /* Footer */
+footer {
+    background-color: #4D356E;
+    color: #ECDEFF;
+}
+
 #social-networks i {
     font-size: 160%;
     padding: 5%;
+    color: #D891EF;
+}
+
+#social-networks i:hover {
+    color: #ECDEFF;
+}
+
+#address {
+    background-color: #ffffff;
+    color: #4D356E;
+}
+
+#address a {
+    color: #4D356E;
+    text-decoration: none;
+}
+
+#address a:hover {
+    color: #D891EF;
+    text-decoration: underline;
 }
