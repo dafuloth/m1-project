@@ -179,7 +179,7 @@ It should be possible to access the contact form modal on any page of the websit
 ### Libraries
 
 - [Google Fonts](https://fonts.google.com)
-- [Fontawesome](https://fontawesome.com/) for icons
+- [Bootstrap Icons](https://icons.getbootstrap.com/) for icons
 
 ### Platforms
 
