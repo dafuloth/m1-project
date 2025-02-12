@@ -3,18 +3,18 @@
     "short_name": "Lilac Lounge",
     "icons": [
         {
-            "src": "/assets/favicon/android-chrome-192x192.png",
+            "src": "/m1-project/assets/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-512x512.png",
+            "src": "/m1-project/assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "/m1-project/index.html",
     "theme_color": "#D891EF",
     "background_color": "#4D356E",
     "display": "standalone"
-} 
+}
