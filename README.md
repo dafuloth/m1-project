@@ -52,10 +52,7 @@ This project imagines a local music and events venue _Lilac Lounge_ who would li
 
 5.  [GitHub Deployment](#github-deployment)
 
-6.  <details open>
-      <summary><a href="#credits">Credits</a></summary>
-
-    </details>
+6.  [Credits](#credits)
 
 ## User Experience (UX)
 
@@ -164,6 +161,14 @@ The benefit of using a modal for the contact form is that the user is not naviga
 
 It should be possible to access the contact form modal on any page of the website. In order to avoid duplicating the code of the contact form on every page, the HTML of the contact form is stored in the file `contact.html` and loaded dynamically using JavaScript wherever it is required. This approach also makes it easier to update the contact form as it only needs to be changed in one place.
 
+### As a Progressive Web App (PWA)
+
+Any website or web application can be set up to work as a Progressive Web App. PWAs are a way to make the experience of using a web application feel like a platform-specific application. A key feature of PWAs is installability. This is possible on desktop or mobile browsers. In either case, the website will have its own app icon and launch in its own standalone window.
+
+Installability has been implemented through the `site.webmanifest` file.
+
+See the [General Testing](#general-testing) section for a demonstration of installation experience.
+
 ## Technologies Used
 
 ### Languages
@@ -228,7 +233,7 @@ This is an issue that comes under general testing as it is not a bug per se. By 
 
 As this could be distracting the property has been set to `fallback` instead. In this case the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
 
-### As a Progressive web app
+#### As a Progressive Web App
 
 ### Troubleshooting and Bug-Fixing
 
@@ -247,6 +252,8 @@ As this could be distracting the property has been set to `fallback` instead. In
 [logo-text-fixed]: docs/readme-images/correct-logo-text-font.png
 
 ## GitHub Deployment
+
+> **Note**: A custom domain is used for the GitHub Pages user site on this GitHub account, so the custom domain is applied to all project sites including this one. Therefore it is normal that visiting the live deployment URL <https://dafuloth.github.io/m1-project> will open <https://dafuloth.me/m1-project>.
 
 ### GitHub Pages
 
@@ -296,7 +303,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Credits
 
-#### Code
+[web.dev: Progressive Web Apps](https://web.dev/explore/progressive-web-apps) to learn about Progressive Web Apps (PWAs)
 
 [web.dev: Add a web app manifest](https://web.dev/articles/add-manifest)
 was helpful for working with the `site.webmanifest` file that accompanies the favicon files produced by favicon.io.
@@ -307,8 +314,6 @@ was helpful for working with the `site.webmanifest` file that accompanies the fa
 [How To Disable Text Selection in HTML/CSS](https://www.w3schools.com/howto/howto_css_disable_text_selection.asp)
 
 [font-display](https://css-tricks.com/almanac/properties/f/font-display/) helps to understand the consequences of the `font-display` CSS property
-
-#### Media
 
 #### Acknowledgements
 
