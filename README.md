@@ -135,6 +135,10 @@ As a patron, I want to:
 
 ## Design
 
+### Fonts
+
+Fonts have been selected to support an impression of the Lilac Lounge as a trendy, sophisticated venue. The cursive _Dynalight_ font is used for the logo, while the _Faustina_ serif font is used as the main font of the website.
+
 ### Colours
 
 ![Lilac Lounge colours](docs/readme-images/lilac-lounge-colorxs.png)
