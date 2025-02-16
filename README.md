@@ -16,7 +16,6 @@ This project imagines a local music and events venue _Lilac Lounge_ who would li
     - [Business goals](#business-goals)
     - [User Stories](#user-stories)
         </details></li>
-
          <li><details>
          <summary><a href="#design">Design</a></summary>
 
@@ -52,7 +51,9 @@ This project imagines a local music and events venue _Lilac Lounge_ who would li
 
 5.  [GitHub Deployment](#github-deployment)
 
-6.  [Credits](#credits)
+6.  [References](#references)
+
+7.  [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 
@@ -149,11 +150,39 @@ Fonts have been selected to support an impression of the Lilac Lounge as a trend
 
 ### Navigation bar
 
-The responsive navigation bar for the website has been implement via the Bootstrap `navbar` which has been styled according to the design.
+The header contains a responsive navigation bar for the website which has been implemented via the Bootstrap `navbar` component, styled according to our design.
 
 #### Logo
 
 On the far left of the navbar we may choose to display a image as a logo. Currently in its place is a text logo, in the form of the name of business written in the imported _Dynalight_ Google Font. Since it is supposed to a logo, text selection has been disabled via CSS.
+
+### Hero images
+
+I make use of a series of 4 images to illustrate what the Lilac Lounge offers, i.e. music events, theatre events, independent cinema, venue hire. Due to the more limited horizontal space on mobile, I make use of a Bootstrap carousel to display the images so each one can capture the visitors full attention without having taking up the whole page. On larger screens where more space is available, it is sufficient to have a 2 by 2 layout for medium size screens or a row of 4 for wider screens.
+
+I used Leonardo.Ai to generate the "theatre" hero image while the rest were acquired from Unsplash. The images are of varying aspect ratios so when displayed by the carousel at full-width of the screen, the transition between images is not very smooth since the height varies between hero images.
+
+I determined that my options for resolving this were to either manually edit the images to crop to the same aspect ratio, or else I could display the images in a container of fixed aspect ratio. I was unsure how best to achieve this so I asked Copilot which responded with the following CSS classes which I have used:
+
+```css
+.carousel-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  overflow: hidden;
+}
+
+.carousel-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+
+Together, `overflow: hidden` on the wrapper and `object-fit: cover` on the images have the effect of cropping the image to fit a 16:9 aspect ratio.
 
 ### The contact form
 
@@ -164,6 +193,10 @@ The benefit of using a modal for the contact form is that the user is not naviga
 #### DRYing the contact form
 
 It should be possible to access the contact form modal on any page of the website. In order to avoid duplicating the code of the contact form on every page, the HTML of the contact form is stored in the file `contact.html` and loaded dynamically using JavaScript wherever it is required. This approach also makes it easier to update the contact form as it only needs to be changed in one place.
+
+### Responsive Hero
+
+The hero image
 
 ### As a Progressive Web App (PWA)
 
@@ -305,7 +338,10 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-### Credits
+### References
+
+[DigitalOcean: How To Scale and Crop Images with CSS object-fit
+](https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit#using-object-fit-cover)
 
 [web.dev: Progressive Web Apps](https://web.dev/explore/progressive-web-apps) to learn about Progressive Web Apps (PWAs)
 
@@ -319,6 +355,14 @@ was helpful for working with the `site.webmanifest` file that accompanies the fa
 
 [font-display](https://css-tricks.com/almanac/properties/f/font-display/) helps to understand the consequences of the `font-display` CSS property
 
-#### Acknowledgements
+### Media
+
+- _Music_ hero image by [Alex Zamora](https://unsplash.com/@chamocois?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/band-playing-musical-instruments-FU1KddSIIR4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- _Theatre_ hero image generated using [Leonardo.Ai](https://app.leonardo.ai/image-generation)
+- _Independent Cinema_ hero image by [Jake Hills](https://unsplash.com/@jakehills?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/group-of-people-staring-at-monitor-inside-room-23LET4Hxj_U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- _Venue Hire_ hero image by [CHUTTERSNAP](https://unsplash.com/@chuttersnap?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-ceramic-dinnerware-set-aEnH4hJ_Mrs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+
+### Acknowledgements
 
 - My mentor for their useful tips and helpful insights
