@@ -184,6 +184,8 @@ I determined that my options for resolving this were to either manually edit the
 
 Together, `overflow: hidden` on the wrapper and `object-fit: cover` on the images have the effect of cropping the image to fit a 16:9 aspect ratio.
 
+I apply a similar approach to displaying the hero images on medium and larger screens.
+
 ### The contact form
 
 Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I decided that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
