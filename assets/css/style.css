@@ -75,7 +75,8 @@ main {
 .carousel-image-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio (9 / 16 * 100) */
     overflow: hidden;
 }
 
@@ -86,6 +87,16 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#heroCarousel h2 {
+    font-style: italic;
+    font-weight: bold;
+    color: #4D356E;
+    background-color: #FFFFFF;
+    display: inline;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 /* Footer */
