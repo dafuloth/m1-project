@@ -55,12 +55,9 @@ body {
 }
 
 /* Main content */
+
 main {
-    /* Enlarge main element to push footer down*/
-    flex: 1 0 auto;
-    /* Enable flex properties for child elements */
-    display: flex;
-    flex-direction: column;
+    color: #4D356E;
 }
 
 /* Hero */
@@ -102,7 +99,8 @@ main {
     object-fit: cover;
 }
 
-.hero-caption, .carousel-caption>h2 {
+.hero-caption,
+.carousel-caption>h2 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -112,6 +110,26 @@ main {
     color: #fff;
     text-align: center;
     padding: 10px;
+    font-style: italic;
+}
+
+#welcome {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+hr {
+    border-top: 1px solid #4D356E;
+}
+
+#music,
+#theatre,
+#cinema,
+#other {
+    margin-bottom: 1em;
+}
+
+.event-heading {
     font-style: italic;
 }
 
@@ -143,4 +161,11 @@ footer {
 #address a:hover {
     color: #D891EF;
     text-decoration: underline;
+}
+
+/* Styles for screens of medium size and larger */
+@media screen and (min-width: 768px) {
+    #theatre, #other {
+        border-left: 1px solid #ECDEFF;
+    }
 }
