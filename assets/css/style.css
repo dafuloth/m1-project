@@ -34,6 +34,8 @@ body {
 
 #menu a:hover {
     color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 #menu a.active {
