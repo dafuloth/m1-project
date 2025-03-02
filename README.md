@@ -78,7 +78,7 @@ Customer goals are:
 
 Beginning on the home page, the customer can see the upcoming events at the _Lilac Lounge_ which can help to give them an idea of kind of _vibe_ they may find.
 
-Right after the events calendar there is a call-to-action directed at customers: a link to the Contact form that the customer can click if their interest is piqued.
+There is a call-to-action at the end of pages directed at customers: a link to the Contact form that the customer can click if their interest is piqued.
 
 The website will help the customer to achieve these goals because:
 
@@ -190,7 +190,9 @@ I apply a similar approach to displaying the hero images on medium and larger sc
 
 Initially the contact form was going to be on its own separate page. However, as I became more familiar with Bootstrap, I decided that it would be more effective to implement the contact form via a Bootstrap Modal in order to maintain focus on the content.
 
-The benefit of using a modal for the contact form is that the user is not navigated away from the site content, and nor would they need to manually return to the originating page. Thus the user may be encouraged to continue exploring the website. Meanwhile, a separate contact form _page_ does not offer anything else besides a contact form which could prematurely signal the end of the user journey.
+The benefit of using a modal for the contact form is that the user is not navigated away from the site content, and nor would they need to manually return to the originating page. Thus the user may be encouraged to continue exploring the website. Meanwhile, only having a separate contact form _page_ does not offer anything else besides a contact form which could prematurely signal the end of the user journey.
+
+A standalone version of the Contact form is incorporated into the About Us page which will serve to summarise information about the venue and offer a way for user to send a message to the venue management.
 
 #### DRYing the contact form
 
@@ -363,7 +365,6 @@ was helpful for working with the `site.webmanifest` file that accompanies the fa
 - _Theatre_ hero image generated using [Leonardo.Ai](https://app.leonardo.ai/image-generation)
 - _Independent Cinema_ hero image by [Jake Hills](https://unsplash.com/@jakehills?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/group-of-people-staring-at-monitor-inside-room-23LET4Hxj_U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 - _Venue Hire_ hero image by [CHUTTERSNAP](https://unsplash.com/@chuttersnap?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-ceramic-dinnerware-set-aEnH4hJ_Mrs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-
 
 ### Acknowledgements
 
