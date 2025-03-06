@@ -46,9 +46,16 @@ body {
     color: #d8bdff;
 }
 
+#nav-toggle:hover {
+    border-color: #d891ef !important;
+    border-width: 2px;
+}
+
 #nav-toggle.navbar-toggler {
     border-color: #d891ef;
 }
+
+
 
 /* Customise toggler icon color: stroke set to site violet colour #D891EF rgb values (216, 145, 239) */
 #nav-toggle.navbar-toggler .navbar-toggler-icon {
@@ -60,6 +67,86 @@ body {
 main {
     color: #4d356e;
     margin-bottom: 1em;
+}
+
+main a {
+    color: #d891ef;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #d8bdff;
+    text-decoration-line: underline;
+}
+
+
+/* Contact Form */
+
+form > h3 {
+    text-align: center;
+}
+
+.form-select:focus,
+input:focus,
+textarea:focus,
+button:focus-visible {
+    outline: none;
+    border-color: #d891ef !important;
+    /* Shadow for better visibility */
+    box-shadow: 0 0 0 0.25rem rgba(216, 145, 239, 0.25) !important;
+}
+
+/* Highlight fields on hover */
+.form-select:hover,
+input:hover,
+textarea:hover {
+    border-color: #d891ef;
+    border-width: 2px;
+}
+
+/* Make Select field placeholder italic for emphasis  */
+.form-select {
+    font-style: italic;
+}
+
+/* Remove italic when valid option is selected  */
+.form-select:valid {
+    font-style: normal;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #d891ef;
+    border-color: #d891ef;
+}
+
+.form-check-label {
+    margin-left: 2px;
+}
+
+.btn-primary {
+    display: block;
+    border-width: 2px;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: 0 auto;
+    --bs-btn-color: #d891ef;
+    --bs-btn-border-color: #4d356e;
+    --bs-btn-bg: #4d356e;
+
+    --bs-btn-hover-color: #4d356e;
+    --bs-btn-hover-border-color: #d891ef;
+    --bs-btn-hover-bg: #d891ef;
+
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+
+    --bs-btn-active-color: #4d356e;
+    --bs-btn-active-bg: #d8bdff;
+    --bs-btn-active-border-color: #d8bdff;
+
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ecdeff;
+    --bs-btn-disabled-bg: #4d356e;
+    --bs-btn-disabled-border-color: #4d356e;
 }
 
 /* Hero */
