@@ -4,10 +4,19 @@
 /* Colour palette: 
     Bright Lilac color: #D891EF;
     Dark Slate Blue color: #4D356E; 
-    White Violet color: #ECDEFF;
+    White Violet color: #ECDEFF
     Mauve color: #D8BDFF;
     White color: #FFFFFF;
 */
+
+:root {
+    /* Define CSS variables of the colour palette */
+    --bright-lilac: #d891ef;
+    --dark-slate-blue: #4d356e;
+    --white-violet: #ecdeff;
+    --mauve: #d8bdff;
+    --white: #fff;
+}
 
 body {
     font-family: "Faustina", serif;
@@ -15,7 +24,7 @@ body {
 
 #logo {
     font-family: "Dynalight", serif;
-    color: #ecdeff;
+    color: var(--white-violet);
     font-size: 200%;
 
     /* Prevent text selection of logo text */
@@ -25,15 +34,15 @@ body {
 /* Navbar links */
 
 .navbar {
-    background-color: #4d356e;
+    background-color: var(--dark-slate-blue);
 }
 
 #menu a {
-    color: #ecdeff;
+    color: var(--white-violet);
 }
 
 #menu a:hover {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -43,19 +52,17 @@ body {
 }
 
 #nav-toggle {
-    color: #d8bdff;
+    color: var(--mauve);
 }
 
 #nav-toggle:hover {
-    border-color: #d891ef !important;
+    border-color: var(--bright-lilac) !important;
     border-width: 2px;
 }
 
 #nav-toggle.navbar-toggler {
-    border-color: #d891ef;
+    border-color: var(--bright-lilac);
 }
-
-
 
 /* Customise toggler icon color: stroke set to site violet colour #D891EF rgb values (216, 145, 239) */
 #nav-toggle.navbar-toggler .navbar-toggler-icon {
@@ -65,24 +72,23 @@ body {
 /* Main content */
 
 main {
-    color: #4d356e;
+    color: var(--dark-slate-blue);
     margin-bottom: 1em;
 }
 
 main a {
-    color: #d891ef;
+    color: var(--bright-lilac);
     text-decoration: none;
 }
 
 main a:hover {
-    color: #d8bdff;
+    color: var(--mauve);
     text-decoration-line: underline;
 }
 
-
 /* Contact Form */
 
-form > h3 {
+form>h3 {
     text-align: center;
 }
 
@@ -91,7 +97,7 @@ input:focus,
 textarea:focus,
 button:focus-visible {
     outline: none;
-    border-color: #d891ef !important;
+    border-color: var(--bright-lilac) !important;
     /* Shadow for better visibility */
     box-shadow: 0 0 0 0.25rem rgba(216, 145, 239, 0.25) !important;
 }
@@ -100,7 +106,7 @@ button:focus-visible {
 .form-select:hover,
 input:hover,
 textarea:hover {
-    border-color: #d891ef;
+    border-color: var(--bright-lilac);
     border-width: 2px;
 }
 
@@ -115,8 +121,8 @@ textarea:hover {
 }
 
 input[type="checkbox"]:checked {
-    background-color: #d891ef;
-    border-color: #d891ef;
+    background-color: var(--bright-lilac);
+    border-color: var(--bright-lilac);
 }
 
 .form-check-label {
@@ -129,24 +135,24 @@ input[type="checkbox"]:checked {
     padding-left: 3em;
     padding-right: 3em;
     margin: 0 auto;
-    --bs-btn-color: #d891ef;
-    --bs-btn-border-color: #4d356e;
-    --bs-btn-bg: #4d356e;
+    --bs-btn-color: var(--bright-lilac);
+    --bs-btn-border-color: var(--dark-slate-blue);
+    --bs-btn-bg: var(--dark-slate-blue);
 
-    --bs-btn-hover-color: #4d356e;
-    --bs-btn-hover-border-color: #d891ef;
-    --bs-btn-hover-bg: #d891ef;
+    --bs-btn-hover-color: var(--dark-slate-blue);
+    --bs-btn-hover-border-color: var(--bright-lilac);
+    --bs-btn-hover-bg: var(--bright-lilac);
 
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
 
-    --bs-btn-active-color: #4d356e;
-    --bs-btn-active-bg: #d8bdff;
-    --bs-btn-active-border-color: #d8bdff;
+    --bs-btn-active-color: var(--dark-slate-blue);
+    --bs-btn-active-border-color: var(--mauve);
+    --bs-btn-active-bg: var(--mauve);
 
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #ecdeff;
-    --bs-btn-disabled-bg: #4d356e;
-    --bs-btn-disabled-border-color: #4d356e;
+    --bs-btn-disabled-color: var(--white-violet);
+    --bs-btn-disabled-border-color: var(--dark-slate-blue);
+    --bs-btn-disabled-bg: var(--dark-slate-blue);
 }
 
 /* Hero */
@@ -213,7 +219,7 @@ input[type="checkbox"]:checked {
 }
 
 hr {
-    border-top: 1px solid #4d356e;
+    border-top: 1px solid var(--dark-slate-blue);
 }
 
 #music,
@@ -246,35 +252,34 @@ hr {
     object-fit: cover;
 }
 
-
 /* Footer */
 footer {
-    background-color: #4d356e;
-    color: #ecdeff;
+    background-color: var(--dark-slate-blue);
+    color: var(--white-violet);
     margin-bottom: 1em;
 }
 
 #social-networks i {
     font-size: 160%;
-    color: #d891ef;
+    color: var(--bright-lilac);
 }
 
 #social-networks i:hover {
-    color: #ecdeff;
+    color: var(--white-violet);
 }
 
 #address {
-    background-color: #ffffff;
-    color: #4d356e;
+    background-color: var(--white);
+    color: var(--dark-slate-blue);
 }
 
 #address a {
-    color: #4d356e;
+    color: var(--dark-slate-blue);
     text-decoration: none;
 }
 
 #address a:hover {
-    color: #d891ef;
+    color: var(--bright-lilac);
     text-decoration: underline;
 }
 
@@ -284,6 +289,6 @@ footer {
     /* Add left border to visually separate sections */
     #theatre,
     #other {
-        border-left: 1px solid #ecdeff;
+        border-left: 1px solid var(--white-violet);
     }
 }
