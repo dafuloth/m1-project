@@ -20,6 +20,7 @@
 
 body {
     font-family: "Faustina", serif;
+    color: var(--dark-slate-blue);
 }
 
 #logo {
@@ -51,40 +52,63 @@ body {
     font-weight: bold;
 }
 
-#nav-toggle {
+#navToggle {
     color: var(--mauve);
 }
 
-#nav-toggle:hover {
+#navToggle:hover {
     border-color: var(--bright-lilac) !important;
     border-width: 2px;
 }
 
-#nav-toggle.navbar-toggler {
+#navToggle.navbar-toggler {
     border-color: var(--bright-lilac);
 }
 
 /* Customise toggler icon color: stroke set to site violet colour #D891EF rgb values (216, 145, 239) */
-#nav-toggle.navbar-toggler .navbar-toggler-icon {
+#navToggle.navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28216, 145, 239, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Main content */
 
 main {
-    color: var(--dark-slate-blue);
     margin-bottom: 1em;
 }
 
-main a {
+main a,
+.btn-link {
     color: var(--bright-lilac);
     text-decoration: none;
 }
 
-main a:hover {
-    color: var(--mauve);
+main a:hover,
+.btn-link:hover {
+    color: var(--dark-slate-blue);
     text-decoration-line: underline;
 }
+
+#cta>button:active {
+    color: var(--mauve);
+}
+
+/* Override Bootstrap btn-link */
+/* .btn-link {
+    --bs-btn-font-weight: 400;
+    --bs-btn-color: var(--bs-link-color);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: var(--bs-link-hover-color);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-active-color: var(--bs-link-hover-color);
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-border-color: transparent;
+    --bs-btn-box-shadow: 0 0 0 #000;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    text-decoration: none;
+} */
+
 
 /* Contact Form */
 
@@ -129,6 +153,7 @@ input[type="checkbox"]:checked {
     margin-left: 2px;
 }
 
+/* Override Bootstrap btn-primary */
 .btn-primary {
     display: block;
     border-width: 2px;
@@ -259,12 +284,12 @@ footer {
     margin-bottom: 1em;
 }
 
-#social-networks i {
+#socialNetworks i {
     font-size: 160%;
     color: var(--bright-lilac);
 }
 
-#social-networks i:hover {
+#socialNetworks i:hover {
     color: var(--white-violet);
 }
 

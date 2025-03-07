@@ -37,7 +37,7 @@
                 </a>
 
                 <!-- Navbar -->
-                <button id="nav-toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button id="navToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
         <section id="intro" class="container text-center">
             <h2 class="display-2">About Us</h2>
             <p class="lead">
-                Learn more about us or <a href="#contact">send us a message</a>
+                Learn more about us or <a href="#contactForm">send us a message</a>
             </p>
         </section>
 
@@ -89,13 +89,12 @@
 
         <hr />
 
-        <section id="contact" class="container"></section>
-
+        <section id="contactForm" class="container">Loading form...</section>
     </main>
 
     <footer class="text-center">
-        <section id="main-footer" class="container pt-3">
-            <ul id="social-networks" class="list-inline d-flex justify-content-evenly">
+        <section id="mainFooter" class="container pt-3">
+            <ul id="socialNetworks" class="list-inline d-flex justify-content-evenly">
                 <!-- Good practice to use rel="noopener" -->
                 <li class="list-inline-item">
                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX9RwfGbeGQwP" target="_blank" rel="noopener"
@@ -120,27 +119,28 @@
             </ul>
         </section>
         <section id="address" class="container-fluid d-flex flex-column flex-md-row justify-content-center">
-            <span id="address-line-1" class="me-md-1">174 Camden High Street, London</span>
-            <span id="address-line-2">NW1 0NE
+            <span id="addressLine1" class="me-md-1">174 Camden High Street, London</span>
+            <span id="addressLine2">NW1 0NE
                 <a href="https://maps.app.goo.gl/GVCMe2As3JGmSCVc9" target="_blank" rel="noopener"
                     aria-label="See where we are using Google Maps (opens in a new tab)">[ Google Maps <i
                         class="bi bi-pin-map"></i> ]</a></span>
         </section>
     </footer>
 
-    <!-- bootstrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
     <!-- load contact form -->
     <script>
         fetch('assets/partials/contact-form.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('contact').innerHTML = data;
+                document.getElementById('contactForm').innerHTML = data;
             });
     </script>
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
