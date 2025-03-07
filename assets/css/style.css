@@ -156,16 +156,16 @@ input[type="checkbox"]:checked {
 /* Override Bootstrap btn-primary */
 .btn-primary {
     display: block;
-    border-width: 2px;
+    border-width: 3px;
     padding-left: 3em;
     padding-right: 3em;
     margin: 0 auto;
-    --bs-btn-color: var(--bright-lilac);
-    --bs-btn-border-color: var(--dark-slate-blue);
+    --bs-btn-color: var(--white-violet);
+    --bs-btn-border-color: var(--bright-lilac);
     --bs-btn-bg: var(--dark-slate-blue);
 
     --bs-btn-hover-color: var(--dark-slate-blue);
-    --bs-btn-hover-border-color: var(--bright-lilac);
+    --bs-btn-hover-border-color: var(--mauve);
     --bs-btn-hover-bg: var(--bright-lilac);
 
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
