@@ -1,5 +1,7 @@
 # Milestone 1 Project: Lilac Lounge
 
+![Am I Responsive: responsiveness preview](docs/readme-images/amiresponsive.png)
+
 This project imagines a local music and events venue _Lilac Lounge_ who would like to have a new website in order to better promote the business and have more customers.
 
 ## Contents
