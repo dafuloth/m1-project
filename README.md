@@ -150,6 +150,8 @@ Fonts have been selected to support an impression of the Lilac Lounge as a trend
 
 ## Features
 
+> **Note** : If the user disables JavaScript in their browser (perhaps via an ad-blocker) then certain website functionality will stop working, specifically: nav toggler, carousel, modal, and contact form loader. However, since JavaScript is such a fundamental part of the web and normally enabled by default, it is reasonable to assume that it will be available.
+
 ### Navigation bar
 
 The header contains a responsive navigation bar for the website which has been implemented via the Bootstrap `navbar` component, styled according to our design.
@@ -198,7 +200,9 @@ A standalone version of the Contact form is incorporated into the About Us page 
 
 #### DRYing the contact form
 
-It should be possible to access the contact form modal on any page of the website. In order to avoid duplicating the code of the contact form on every page, the HTML of the contact form is stored in the file `contact.html` and loaded dynamically using JavaScript wherever it is required. This approach also makes it easier to update the contact form as it only needs to be changed in one place.
+It should be possible to access the contact form modal on any page of the website. In order to avoid duplicating the code of the contact form on every page, the HTML of the contact form is stored in the file `contact-form.html` and loaded dynamically using JavaScript wherever it is required. This approach also makes it easier to update the contact form as it only needs to be changed in one place.
+
+I do not apply a similar technique to the header and footer because they are static content that are highly unlikely to ever change.
 
 ### Responsive Hero
 
