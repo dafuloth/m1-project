@@ -1,14 +1,6 @@
 /* Import Dynalight and Faustina fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Dynalight&family=Faustina:ital,wght@0,300..800;1,300..800&display=fallback");
 
-/* Colour palette: 
-    Bright Lilac color: #D891EF;
-    Dark Slate Blue color: #4D356E; 
-    White Violet color: #ECDEFF
-    Mauve color: #D8BDFF;
-    White color: #FFFFFF;
-*/
-
 :root {
     /* Define CSS variables of the colour palette */
     --bright-lilac: #d891ef;
@@ -91,23 +83,6 @@ main a:hover,
 #cta>button:active {
     color: var(--mauve);
 }
-
-/* Override Bootstrap btn-link */
-/* .btn-link {
-    --bs-btn-font-weight: 400;
-    --bs-btn-color: var(--bs-link-color);
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: transparent;
-    --bs-btn-hover-color: var(--bs-link-hover-color);
-    --bs-btn-hover-border-color: transparent;
-    --bs-btn-active-color: var(--bs-link-hover-color);
-    --bs-btn-active-border-color: transparent;
-    --bs-btn-disabled-color: #6c757d;
-    --bs-btn-disabled-border-color: transparent;
-    --bs-btn-box-shadow: 0 0 0 #000;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    text-decoration: none;
-} */
 
 
 /* Contact Form */
