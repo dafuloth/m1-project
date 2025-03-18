@@ -1,3 +1,5 @@
+[Link to live project](https://dafuloth.github.io/m1-project)
+
 # Milestone 1 Project: Lilac Lounge
 
 ![Am I Responsive: responsiveness preview](docs/readme-images/amiresponsive.png)
@@ -138,9 +140,27 @@ As a patron, I want to:
 
 ## Design
 
+### Wireframes
+
+Wireframes were created in Figma and can be viewed [here](https://www.figma.com/design/ihBXh6M1pJxRHR5eMEqio5/Latest-M1-Wireframes?node-id=0-1&t=kn1R2iVQ3QHEdUtQ-1)
+
+#### Mobile wireframes
+
+![Mobile Wireframes](docs/readme-images/mobile-wireframes.png)
+
+#### Tablet wireframes
+
+![Tablet Wireframes](docs/readme-images/tablet-wireframes.png)
+
+#### Desktop wireframe
+
+For the Desktop layout, the main change will be on the Home page where the hero images are displayed in a row to take advantage of the increased horizontal space that is available on desktop. The Gallery and About Us pages are mostly the same on Desktop as they were on Tablet.
+
+![Desktop Wireframe](docs/readme-images/desktop-wireframe.png)
+
 ### Fonts
 
-Fonts have been selected to support an impression of the Lilac Lounge as a trendy, sophisticated venue. The cursive _Dynalight_ font is used for the logo, while the _Faustina_ serif font is used as the main font of the website.
+Fonts have been selected from Google Fonts to support the impression of the Lilac Lounge as a trendy and sophisticated venue. The cursive _Dynalight_ font is used for the logo, while the _Faustina_ serif font is used as the main font of the website.
 
 ### Colours
 
@@ -241,9 +261,7 @@ See the [General Testing](#general-testing) section for a demonstration of insta
 ### Tools and Programs
 
 - [favicon.io](https://favicon.io/): to produce an initial version of the favicon, and ultimately to generate the favicon image files that would be used to implement the favicon
-- [Figma](https://www.figma.com/): to create a revised version of the favicon, export it to a file that I then uploaded to favicon.io to generate favicon image files
-- [Balsamiq](https://balsamiq.com/) to create wireframes.
-- [Favicon Generator](https://www.favicon-generator.org/)
+- [Figma](https://www.figma.com/): to create wireframes. Also to create a revised version of the favicon, export it to a file that I then uploaded to favicon.io to generate favicon image files.
 - [Mockup Generator](https://techsini.com/multi-mockup/index.php) for device mockup images.
 - [colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff)
   - Generating and visualising color palettes
