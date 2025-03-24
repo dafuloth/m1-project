@@ -423,10 +423,9 @@ was helpful for working with the `site.webmanifest` file that accompanies the fa
 
 ### Media
 
-- _Music_ hero image by [Alex Zamora](https://unsplash.com/@chamocois?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/band-playing-musical-instruments-FU1KddSIIR4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-- _Theatre_ hero image generated using [Leonardo.Ai](https://app.leonardo.ai/image-generation)
-- _Independent Cinema_ hero image by [Jake Hills](https://unsplash.com/@jakehills?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/group-of-people-staring-at-monitor-inside-room-23LET4Hxj_U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-- _Venue Hire_ hero image by [CHUTTERSNAP](https://unsplash.com/@chuttersnap?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-ceramic-dinnerware-set-aEnH4hJ_Mrs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Unsplash for photos. Individual image credits included in code comments
+- Leonardo.ai to generate images:
+  - [theatre image](https://cdn.leonardo.ai/users/cb73d82b-ab4a-4db0-85df-542867d12132/generations/1851823e-5b1f-4611-93d2-e60cbd447635/Leonardo_Lightning_XL_Photorealistic_image_showing_actors_on_a_0.jpg)
 
 ### Acknowledgements
 
