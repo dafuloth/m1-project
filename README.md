@@ -250,7 +250,26 @@ Any website or web application can be set up to work as a Progressive Web App th
 
 Two main features of PWAs are offline availability and installability. Offline availability (i.e. functioning without an internet connection) requires more work and was deemed out of scope for this project. Installability means that the website can be installed like a native app: having its own app icon and launching in its own window separate from the browser.
 
-On an Android phone it looks like this:
+#### Mobile installation and usage
+
+The ability to install the _Lilac Lounge_ website as an app was tested using Google Chrome on an Android phone. While I do not have an iPhone to test with, a similar process exists on iPhones as well.
+
+PWAs can be installed via a prompt that appears on the initial visit, or via the **Add to home screen** option from the browser menu:
+
+|                     Installation prompt                      |     **Add to home screen** option in browser menu     |
+| :----------------------------------------------------------: | :---------------------------------------------------: |
+| ![Prompt to install on initial visit][mobile-install-prompt] | ![Browser menu install option][mobile-install-option] |
+
+[mobile-install-prompt]: docs/readme-images/pwa-install-prompt.png
+[mobile-install-option]: docs/readme-images/pwa-add-to-home-screen.png
+
+|         Installation can be started          |
+| :------------------------------------------: |
+| ![Installation can be started][installation] |
+
+[installation]: docs/readme-images/pwa-install.png
+
+Once installed on an Android phone it looks like this:
 
 |          PWA app icon on Home screen           | PWA launches with splash screen  |     PWA opens in own window      |
 | :--------------------------------------------: | :------------------------------: | :------------------------------: |
@@ -260,7 +279,18 @@ On an Android phone it looks like this:
 [pwa-splash]: docs/readme-images/pwa-splash.png
 [pwa-mobile]: docs/readme-images/pwa-mobile.png
 
-On desktop (Chrome on MacOS) it looks like this:
+#### Desktop installation and usage
+
+As with mobile browsers, PWA installation is also possible with desktop browsers:
+
+|       Install by clicking the button        |        Install via menu option        |
+| :-----------------------------------------: | :-----------------------------------: |
+| ![Desktop PWA install][pwa-desktop-install] | ![Install via menu][pwa-desktop-menu] |
+
+[pwa-desktop-install]: docs/readme-images/pwa-desktop-install.png
+[pwa-desktop-menu]: docs/readme-images/pwa-desktop-menu.png
+
+Once installed on desktop (Chrome on MacOS) it looks like this:
 
 |               PWA app icons                |      PWA opens in own window      |
 | :----------------------------------------: | :-------------------------------: |
@@ -268,8 +298,6 @@ On desktop (Chrome on MacOS) it looks like this:
 
 [macos-pwa-icon]: docs/readme-images/macos-pwa-icon.png
 [pwa-desktop]: docs/readme-images/pwa-desktop.png
-
-The installation experience is demonstrated in [Testing](#testing).
 
 ## Technologies Used
 
@@ -322,18 +350,6 @@ To address this, I created a new version that is clearer and easier to see at a 
 
 [old-favicon]: docs/readme-images/old-favicon.png
 [new-favicon]: docs/readme-images/new-favicon.png
-
-### As a Progressive Web App
-
-#### On Mobile
-
-The ability to install the _Lilac Lounge_ website as an app was tested using Google Chrome on an Android phone. While I do not have an iPhone to test with, a similar process exists on iPhones as well.
-
-- PWAs can be installed via an installation prompt that appears on the first visit, or via the **Add to home screen** option from the browser menu  
-  <img style="width:45%; float:left" src="docs/readme-images/pwa-install-prompt.png" alt="Prompts to install on first visit">&nbsp;<img style="width:45%; clear:left" src="docs/readme-images/pwa-add-to-home-screen.png" alt="Install via Add to home screen">
-
-- Either way, installation can be started  
-  <img style="clear:left; width:50%" src="docs/readme-images/pwa-install.png" alt="PWA Install">
 
 ## Troubleshooting and Bug-Fixing
 
