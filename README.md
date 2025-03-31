@@ -240,6 +240,16 @@ A standalone version of the Contact form can still be found incorporated into th
 
 To avoid duplicating the code of the contact form on every page that may need to be able to show the contact form, the HTML of the contact form is stored in the file `contact-form.html` and loaded dynamically using JavaScript wherever it is required. This approach also makes it easier to update the contact form as it only needs to be changed in one place.
 
+Copilot helped me with the JavaScript to do this:
+
+```js
+fetch("assets/partials/contact-form.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("contactForm").innerHTML = data;
+  });
+```
+
 I do not apply a similar technique to the header and footer because they are static content and are less likely to change.
 
 ### As a Progressive Web App (PWA)
@@ -326,8 +336,41 @@ Once installed on desktop (Chrome on MacOS) it looks like this:
 - [Figma](https://www.figma.com/): to create wireframes. Also to create a revised version of the favicon, export it to a file that I then uploaded to favicon.io to generate favicon image files.
 - [Am I Responsive?](https://ui.dev/amiresponsive) for device mockup images.
 - [colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff) for generating and visualising color palettes
+- [Nu Html Checker](https://validator.w3.org/nu/) is the W3C HTML Validator
+- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ## Testing
+
+### HTML Validation
+
+I used the W3C HTML validator to check for errors in my HTML
+
+#### Errors
+
+One Error was found:
+![HTML validator error](docs/readme-images/html-error.png)
+
+This occurs in the index and gallery pages because the `formTitle` h3 element referenced by `aria-labelledby` exists in the separate `contact-form.html` file that would be loaded by JavaScript - and doesn't exist in the same HTML file.
+
+To resolve this error, I explicitly provide the aria label by replacing `aria-labelledby="formTitle"` with `aria-label="Contact Us"`
+
+#### Warnings
+
+There were multiple instances of these warnings:
+
+![HTML validator 'article lacks heading' warning](docs/readme-images/html-section-warning.png)
+![HTML validator 'section lacks heading' warning](docs/readme-images/html-article-warning.png)
+
+The `article` warnings occurred on Gallery page where each photo is in an `article`.
+
+The `section` warnings relate mainly to the footer on all pages, and the **Contact Us** button at the bottom of the Home and Gallery pages.
+
+These warnings happen because `article` and `section` elements should include a heading. However, these warnings relate to things that do not need headings and which do not necessarily make sense on their own. I replaced these elements with `div` and the warnings go away.
+
+### CSS Validation
+
+No errors were found:
+![CSS Validation: No errors](docs/readme-images/css-validation.png)
 
 ### JavaScript to load contact form
 
@@ -337,10 +380,11 @@ The small snippet of JavaScript used to load the contact form was tested manuall
 
 When adding the favicon, I soon realised that the combination of colours used would result in low contrast and poor visibility:
 
-<figure>
-  <img src="docs/readme-images/old-favicon-appearance.png" alt="Original favicon appearance in the browser tab" style="width:60%">
-  <figcaption style="font-size:75%">Original favicon as it appears on the browser tab</figcaption>
-</figure>
+|     Original favicon as appears within browser tab      |
+| :-----------------------------------------------------: |
+| ![Original favicon in tab][original-favicon-appearance] |
+
+[original-favicon-appearance]: docs/readme-images/old-favicon-appearance.png
 
 To address this, I created a new version that is clearer and easier to see at a small size, while still adhering to the colour palette:
 
@@ -369,9 +413,9 @@ To address this, I created a new version that is clearer and easier to see at a 
 
 ### Preventing "flash of unstyled text"
 
-This is an issue that comes under general testing as it is not a bug per se. By default, the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is immediately displayed in the serif fallback font because the custom font needs to be downloaded and then the text font is swapped for the downloaded one, i.e. _flash of unstyled text_.
+This is not a bug per se but I think it could be distracting. By default, the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is immediately displayed in the serif fallback font because the custom font needs to be downloaded and then the text font is swapped for the downloaded one, i.e. _flash of unstyled text_.
 
-As this could be distracting, the property has been set to `fallback` instead. This means that the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
+The property has instead been set to `fallback`. This means that the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
 
 ## GitHub Deployment
 
