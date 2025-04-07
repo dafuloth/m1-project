@@ -52,9 +52,10 @@ This project imagines a local music and events venue _Lilac Lounge_ that would l
 4.  <details open>
       <summary><a href="#testing">Testing</a></summary>
 
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
     - [JavaScript to load contact form](#javascript-to-load-contact-form)
     - [Favicon visibility](#favicon-visibility)
-    -
 
     </details>
 
@@ -375,6 +376,31 @@ No errors were found:
 ### JavaScript to load contact form
 
 The small snippet of JavaScript used to load the contact form was tested manually to ensure that contact form links correctly open the contact form in a modal
+
+### Lighthouse
+
+Lighthouse scores differ between mobile and desktop so I document both. Mobile criteria would appear to be more strict.
+
+The Lighthouse reports are mainly good but show that there are some issues with **Performance** which could be addressed.
+
+#### Mobile
+
+![Lighthouse mobile](docs/readme-images/lighthouse-mobile.png)
+
+![Lighthouse mobile report](docs/readme-images/lighthouse-mobile-report.png)
+
+#### Desktop
+
+![Lighthouse desktop](docs/readme-images/lighthouse-desktop.png)
+
+![Lighthouse desktop report](docs/readme-images/lighthouse-desktop-report.png)
+
+#### Improving Performance
+
+Google's documentation for Lighthouse Performance audits notes under [How scores are color-coded](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=devtools#color-coding):
+> To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected.
+
+Based on this, it would be good to improve on the 74 Performance score for mobile. However, it should be noted that "Performance" can naturally fluctuate  as it is affected by many factors such as network or hardware conditions.
 
 ### Favicon visibility
 
