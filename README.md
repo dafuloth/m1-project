@@ -316,7 +316,7 @@ Once installed on desktop (Chrome on MacOS) it looks like this:
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to avoid repeating the contact form code by dynamically loading the HTML whenever it is required
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Frameworks
 
@@ -339,8 +339,81 @@ Once installed on desktop (Chrome on MacOS) it looks like this:
 - [colorxs.com](https://www.colorxs.com/palette/editor/d891ef-4d356e-ecdeff-d8bdff-ffffff) for generating and visualising color palettes
 - [Nu Html Checker](https://validator.w3.org/nu/) is the W3C HTML Validator
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [cwebp](https://developers.google.com/speed/webp/docs/cwebp) to convert JPG images into WEBP format
 
 ## Testing
+
+### Lighthouse
+
+Lighthouse scores differ between mobile and desktop so I will document both. Mobile criteria would appear to be more strict.
+
+Overall the Lighthouse reports are good but show that there are some issues with **Performance** which could be addressed. However, of greater interest is that Lighthouse has identified an **Accessibility** issue on the About page which I will fix.
+
+#### Mobile
+
+![Lighthouse mobile](docs/readme-images/lighthouse-mobile.png)
+
+**Index page:**
+
+![Lighthouse mobile index](docs/readme-images/lighthouse-mobile-index.png)
+
+**Gallery page:**
+
+![Lighthouse mobile gallery](docs/readme-images/lighthouse-mobile-gallery.png)
+
+**About page:**
+
+![Lighthouse mobile about](docs/readme-images/lighthouse-mobile-about.png)
+
+#### Desktop
+
+![Lighthouse desktop](docs/readme-images/lighthouse-desktop.png)
+
+**Index page:**
+
+![Lighthouse desktop index](docs/readme-images/lighthouse-desktop-index.png)
+
+**Gallery page:**
+
+![Lighthouse desktop gallery](docs/readme-images/lighthouse-desktop-gallery.png)
+
+**About page:**
+
+![Lighthouse desktop about](docs/readme-images/lighthouse-desktop-about.png)
+
+### Improving Accessibility
+
+The specific Accessibility issue that is preventing the About page scoring 100 is a contrast issue to do with the text link on the About page:
+
+![About page Accessibility contrast issue](docs/readme-images/about-accessibility-contrast.png)
+
+I can adjust the CSS to improve its contrast:
+
+![Improve contrast](docs/readme-images/accessibility-fix-contrast.png)
+
+This results in the About page scoring 100 for Accessibility:
+
+![Fixed contrast](docs/readme-images/accessibility-fixed-contrast.png)
+
+### Improving Performance
+
+Google's documentation for Lighthouse Performance audits notes under [How scores are color-coded](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=devtools#color-coding):
+
+> To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected.
+
+Based on this, it would be good to improve on the 74 Performance score for mobile.
+
+However, it should be noted that "Performance" can naturally fluctuate as it is affected by many factors such as network or hardware conditions.
+
+Performance metrics are to do with speed. One thing that can slow down a webpage is having to load large image files. I already attempted to address image file sizes by resizing the original JPG images to more appropriate smaller dimensions. However, there is more that I can do to optimize my images.
+
+There are some things that can improve performance that are impractical or unfeasible to explore due to time constraints, such as locally hosting fonts (Google Fonts) and CSS (Bootstrap).
+
+Lighthouse diagnostics recommends to _serve images in next-gen formats_ such as WebP. The WebP format was developed by Google and provides better compression than the JPG format of my original images, resulting in smaller file sizes.
+
+I used the `cwebp` tool to convert the JPG hero images into WEBP files which are of smaller file size. It does improve the Performance score a little but not enough to be considered be considered _Good_:
+
+![Performance with WebP](docs/readme-images/webp-performance.png)
 
 ### HTML Validation
 
@@ -376,31 +449,6 @@ No errors were found:
 ### JavaScript to load contact form
 
 The small snippet of JavaScript used to load the contact form was tested manually to ensure that contact form links correctly open the contact form in a modal
-
-### Lighthouse
-
-Lighthouse scores differ between mobile and desktop so I document both. Mobile criteria would appear to be more strict.
-
-The Lighthouse reports are mainly good but show that there are some issues with **Performance** which could be addressed.
-
-#### Mobile
-
-![Lighthouse mobile](docs/readme-images/lighthouse-mobile.png)
-
-![Lighthouse mobile report](docs/readme-images/lighthouse-mobile-report.png)
-
-#### Desktop
-
-![Lighthouse desktop](docs/readme-images/lighthouse-desktop.png)
-
-![Lighthouse desktop report](docs/readme-images/lighthouse-desktop-report.png)
-
-#### Improving Performance
-
-Google's documentation for Lighthouse Performance audits notes under [How scores are color-coded](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=devtools#color-coding):
-> To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected.
-
-Based on this, it would be good to improve on the 74 Performance score for mobile. However, it should be noted that "Performance" can naturally fluctuate  as it is affected by many factors such as network or hardware conditions.
 
 ### Favicon visibility
 

@@ -72,14 +72,11 @@ main a {
     color: var(--dark-slate-blue);
     text-decoration-line: none;
     font-style: italic;
-    font-weight: bolder;
 }
 
 main a:hover {
     color: var(--bright-lilac);
     text-decoration: underline;
-    font-style: italic;
-
 }
 
 #cta>button:active {
