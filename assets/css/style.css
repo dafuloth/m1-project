@@ -68,16 +68,18 @@ main {
     margin-bottom: 2em;
 }
 
-main a,
-.btn-link {
-    color: var(--bright-lilac);
-    text-decoration: none;
+main a {
+    color: var(--dark-slate-blue);
+    text-decoration-line: none;
+    font-style: italic;
+    font-weight: bolder;
 }
 
-main a:hover,
-.btn-link:hover {
-    color: var(--dark-slate-blue);
-    text-decoration-line: underline;
+main a:hover {
+    color: var(--bright-lilac);
+    text-decoration: underline;
+    font-style: italic;
+
 }
 
 #cta>button:active {
