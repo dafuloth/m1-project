@@ -9,61 +9,40 @@ This project imagines a local music and events venue _Lilac Lounge_ that would l
 
 ## Contents
 
-1.  <details open>
-       <summary><a href="#user-experience-ux">User Experience (UX)</a></summary>
-
-       <ul>
-       <li><details>
-       <summary><a href="#project-goals">Project Goals</a></summary>
-
-    - [`Customer` goals](#customer-goals)
-    - [`Patron` goals](#patron-goals)
-    - [Business goals](#business-goals)
-    - [User Stories](#user-stories)
-        </details></li>
-         <li><details>
-         <summary><a href="#design">Design</a></summary>
-
-      - [Wireframes](#wireframes)
-      - [Fonts](#fonts)
-      - [Icons](#icons)
-      - [Colours](#colours)
-      - [Styling](#styling)
-         </details></li>
-         </ul>
-      </details>
-
-2.  <details open>
-      <summary><a href="#features">Features</a></summary>
-
-    </details>
-
-3.  <details open>
-      <summary><a href="#technologies-used">Technologies Used</a></summary>
-
-    - [Languages](#languages)
-    - [Frameworks](#frameworks)
-    - [Libraries](#libraries)
-    - [Platforms](#platforms)
-    - [Tools and Programs](#tools-and-programs)
-
-    </details>
-
-4.  <details open>
-      <summary><a href="#testing">Testing</a></summary>
-
-    - [HTML Validation](#html-validation)
-    - [CSS Validation](#css-validation)
-    - [JavaScript to load contact form](#javascript-to-load-contact-form)
-    - [Favicon visibility](#favicon-visibility)
-
-    </details>
-
-5.  [GitHub Deployment](#github-deployment)
-
-6.  [References](#references)
-
-7.  [Acknowledgements](#acknowledgements)
+- [User Experience (UX)](#user-experience-ux)
+  - [Project goals](#project-goals)
+  - [User Stories](#user-stories)
+- [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Fonts](#fonts)
+  - [Colours](#colours)
+- [Features](#features)
+  - [Navigation bar](#navigation-bar)
+  - [Responsive Hero](#responsive-hero)
+  - [The contact form](#the-contact-form)
+  - [As a Progressive Web App (PWA)](#as-a-progressive-web-app-pwa)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks](#frameworks)
+  - [Libraries](#libraries)
+  - [Platforms](#platforms)
+  - [Tools and Programs](#tools-and-programs)
+- [Testing](#testing)
+  - [Lighthouse](#lighthouse)
+  - [Improving Accessibility](#improving-accessibility)
+  - [Improving Performance](#improving-performance)
+  - [HTML Validation](#html-validation)
+  - [CSS Validation](#css-validation)
+  - [JavaScript to load contact form](#javascript-to-load-contact-form)
+  - [Favicon visibility](#favicon-visibility)
+- [Acceptance Tests](#acceptance-tests)
+- [Troubleshooting and Bug-Fixing](#troubleshooting-and-bug-fixing)
+  - [Google Fonts](#google-fonts)
+  - [Preventing "flash of unstyled text"](#preventing-flash-of-unstyled-text)
+- [GitHub Deployment](#github-deployment)
+- [References](#references)
+- [Media](#media)
+- [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 
@@ -75,6 +54,8 @@ The website will be aimed at:
 
 - venue-booking `customers`: anyone looking to hire out a venue
 - prospective `patrons`: audience members who may want to see a show at the venue
+
+Therefore for the purposes of User Stories, the _customer_ and the _patron_ are the two personas I will be considering. These personas will each have their own specific goals.
 
 #### `Customer` goals
 
@@ -127,22 +108,26 @@ The website can help to achieve these objectives because:
   - If the venue is seen to be able to draw a higher number of patrons, then that can attract more (and perhaps more prestigious) customers, who can be reassured that the venue is able to accommodate their events and/or provide them with an audience.
   - If the venue attracts big names and puts on more events, it will generate buzz and attract more patrons.
 
-#### User Stories
+### User Stories
 
+I can now develop some User Stories based on the personas' goals:
+
+```
 As a customer, I want to:
 
-1. know what kind of events the venue has had experience hosting
-2. learn about the physical characteristics of the venue:
-   - size
-   - capacity
-   - location
-3. easily contact the venue to discuss hiring the venue
+1. As a customer, I want to know what kind of events the venue has had experience hosting
+2. learn about the physical characteristics of the venue, e.g. size, capacity, location
+3. easily contact the venue to discuss making a booking
 
 As a patron, I want to:
 
-1. know what's on at the _Lilac Lounge_
+1. know what's on at the Lilac Lounge
 2. know how to get to the venue
-3. be reassured that I'll have a good time
+
+As the business owner, I want to:
+1. raise the profile of the _Lilac Lounge_ as a music and events venue
+
+```
 
 ## Design
 
@@ -150,15 +135,15 @@ As a patron, I want to:
 
 Wireframes were created in Figma and can be viewed [here](https://www.figma.com/design/ihBXh6M1pJxRHR5eMEqio5/Latest-M1-Wireframes?node-id=0-1&t=kn1R2iVQ3QHEdUtQ-1)
 
-#### Mobile wireframes
+**Mobile wireframes:**
 
 ![Mobile Wireframes](docs/readme-images/mobile-wireframes.png)
 
-#### Tablet wireframes
+**Tablet wireframes:**
 
 ![Tablet Wireframes](docs/readme-images/tablet-wireframes.png)
 
-#### Desktop wireframe
+**Desktop wireframe:**
 
 For the Desktop layout, the main change will be on the Home page where the hero images are displayed in a row to take advantage of the increased horizontal space that is available on desktop. The Gallery and About Us pages are mostly the same on Desktop as they were on Tablet.
 
@@ -345,7 +330,7 @@ Once installed on desktop (Chrome on MacOS) it looks like this:
 
 ### Lighthouse
 
-Lighthouse scores differ between mobile and desktop so I will document both. Mobile criteria would appear to be more strict.
+Lighthouse scores differ between mobile and desktop so I document both.
 
 Overall the Lighthouse reports are good but show that there are some issues with **Performance** which could be addressed. However, of greater interest is that Lighthouse has identified an **Accessibility** issue on the About page which I will fix.
 
@@ -468,6 +453,101 @@ To address this, I created a new version that is clearer and easier to see at a 
 
 [old-favicon]: docs/readme-images/old-favicon.png
 [new-favicon]: docs/readme-images/new-favicon.png
+
+## Acceptance Tests
+
+I can test the project against the User Stories created at the beginning of the project. By confirming that the User Stories can be successfully fulfilled, I can verify that the project is completed.
+
+A reminder of the User Stories:
+
+> As a customer, I want to:
+>
+> 1. As a customer, I want to know what kind of events the venue has had experience hosting
+> 2. learn about the physical characteristics of the venue, e.g. size, capacity, location
+> 3. easily contact the venue to discuss making a booking
+>
+> As a patron, I want to:
+>
+> 1. know what's on at the Lilac Lounge
+> 2. know how to get to the venue
+>
+> As the business owner, I want to:
+>
+> 1.  raise the profile of the _Lilac Lounge_ as a music and events venue
+
+### Acceptance Test 1
+
+- As a _customer_, I want to know what kind of events the venue has had experience hosting. <br>
+- As a _patron_, I want to know what's on at the Lilac Lounge
+
+These criteria are fulfilled by these features of the website:
+
+- _Upcoming Events_ listing on Home page
+- Event photography on Gallery page
+
+| Page        | Description               | Image                                                                                         |
+| ----------- | ------------------------- | --------------------------------------------------------------------------------------------- |
+| **Home**    | _Upcoming Events_ listing | Mobile: <details><summary>Click to show</summary> ![Upcoming Events (Mobile)][uem] </details> |
+|             |                           | Desktop: ![Upcoming Events (Desktop)][ued]                                                    |
+| **Gallery** | Event photography         | Mobile: <details><summary>Click to show</summary> ![Gallery (Mobile)][gm] </details>          |
+|             |                           | Desktop: ![Gallery (Desktop)][gd]                                                             |
+
+[uem]: docs/readme-images/upcoming-events.png
+[ued]: docs/readme-images/upcoming-events-desktop.png
+[gm]: docs/readme-images/gallery-mobile.png
+[gd]: docs/readme-images/gallery-desktop.png
+
+### Acceptance Test 2
+
+- As a _customer_, I want to find out specific details about the physical characteristics of the venue, e.g. size, capacity, location
+
+This criteria is fulfilled as follows:
+
+| Page     | Description       | Image                       |
+| -------- | ----------------- | --------------------------- |
+| About Us | Venue information | ![Venue Information][venue] |
+
+[venue]: docs/readme-images/venue-info.png
+
+### Acceptance Test 3
+
+- As a _customer_ I want to be able to easily contact the venue to discuss making a booking
+
+This criteria is fulfilled as follows:
+
+| Page          | Description                                | Image                        |
+| ------------- | ------------------------------------------ | ---------------------------- |
+| Home, Gallery | _Contact Us_ call-to-action Button         | ![Call to action][cta]       |
+| Home, Gallery | Contact Us button opens contact form modal | ![Contact form modal][modal] |
+| About Us      | Standalone contact form                    | ![Contact form][form]        |
+
+[cta]: docs/readme-images/cta.png
+[modal]: docs/readme-images/contact-modal.png
+[form]: docs/readme-images/contact-form.png
+
+### Acceptance Test 4
+
+- As a _patron_, I want to know how to get to the venue
+
+This criteria is fulfilled as follows:
+
+| Page      | Description                                                     | Image                               |
+| --------- | --------------------------------------------------------------- | ----------------------------------- |
+| All pages | In footer: Address and external link to location in Google Maps | ![Address and link to map][address] |
+
+[address]: docs/readme-images/address-mobile.png
+
+### Acceptance Test 5
+
+As the business owner, I want to raise the profile of the _Lilac Lounge_ as a music and events venue
+
+This criteria is fulfilled as follows:
+
+| Page      | Description                                                                         | Image                         |
+| --------- | ----------------------------------------------------------------------------------- | ----------------------------- |
+| All pages | In footer: Social Media links for the business to engage with customers and patrons | ![Social Media links][social] |
+
+[social]: docs/readme-images/social.png
 
 ## Troubleshooting and Bug-Fixing
 
