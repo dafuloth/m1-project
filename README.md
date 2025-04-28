@@ -35,10 +35,10 @@ This project imagines a local music and events venue _Lilac Lounge_ that would l
   - [CSS Validation](#css-validation)
   - [JavaScript to load contact form](#javascript-to-load-contact-form)
   - [Favicon visibility](#favicon-visibility)
-- [Acceptance Tests](#acceptance-tests)
 - [Troubleshooting and Bug-Fixing](#troubleshooting-and-bug-fixing)
   - [Google Fonts](#google-fonts)
   - [Preventing "flash of unstyled text"](#preventing-flash-of-unstyled-text)
+- [Acceptance Tests](#acceptance-tests)
 - [GitHub Deployment](#github-deployment)
 - [References](#references)
 - [Media](#media)
@@ -454,9 +454,31 @@ To address this, I created a new version that is clearer and easier to see at a 
 [old-favicon]: docs/readme-images/old-favicon.png
 [new-favicon]: docs/readme-images/new-favicon.png
 
+## Troubleshooting and Bug-Fixing
+
+### Google Fonts
+
+|                                                               |                                                                |
+| :-----------------------------------------------------------: | :------------------------------------------------------------: |
+| **Issue**: Serif font being used instead of the imported font |       ![Imported font not being used][logo-text-problem]       |
+|      **Cause**: `@import` not at the top of the CSS file      | ![Incorrect location of CSS import rule][incorrect-css-import] |
+|         **Fix**: Move @import rule to top of CSS file         |  ![@import rule moved to top of CSS file][correct-css-import]  |
+|            **Result**: Imported font takes effect             |    ![Import font is now correctly applied][logo-text-fixed]    |
+
+[logo-text-problem]: docs/readme-images/incorrect-logo-text-font.png
+[incorrect-css-import]: docs/readme-images/incorrect-css-import.png
+[correct-css-import]: docs/readme-images/correct-css-import.png
+[logo-text-fixed]: docs/readme-images/correct-logo-text-font.png
+
+### Preventing "flash of unstyled text"
+
+This is not a bug per se but I think it could be distracting. By default, the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is immediately displayed in the serif fallback font because the custom font needs to be downloaded and then the text font is swapped for the downloaded one, i.e. _flash of unstyled text_.
+
+The property has instead been set to `fallback`. This means that the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
+
 ## Acceptance Tests
 
-I can test the project against the User Stories created at the beginning of the project. By confirming that the User Stories can be successfully fulfilled, I can verify that the project is completed.
+To close out the project I can test the project against the User Stories created at the beginning. By confirming that the User Stories are successfully fulfilled I can verify that the project is completed.
 
 A reminder of the User Stories:
 
@@ -473,7 +495,7 @@ A reminder of the User Stories:
 >
 > As the business owner, I want to:
 >
-> 1.  raise the profile of the _Lilac Lounge_ as a music and events venue
+> 1. raise the profile of the _Lilac Lounge_ as a music and events venue
 
 ### Acceptance Test 1
 
@@ -539,7 +561,7 @@ This criteria is fulfilled as follows:
 
 ### Acceptance Test 5
 
-As the business owner, I want to raise the profile of the _Lilac Lounge_ as a music and events venue
+As the _business owner_, I want to raise the profile of the _Lilac Lounge_ as a music and events venue
 
 This criteria is fulfilled as follows:
 
@@ -548,28 +570,6 @@ This criteria is fulfilled as follows:
 | All pages | In footer: Social Media links for the business to engage with customers and patrons | ![Social Media links][social] |
 
 [social]: docs/readme-images/social.png
-
-## Troubleshooting and Bug-Fixing
-
-### Google Fonts
-
-|                                                               |                                                                |
-| :-----------------------------------------------------------: | :------------------------------------------------------------: |
-| **Issue**: Serif font being used instead of the imported font |       ![Imported font not being used][logo-text-problem]       |
-|      **Cause**: `@import` not at the top of the CSS file      | ![Incorrect location of CSS import rule][incorrect-css-import] |
-|         **Fix**: Move @import rule to top of CSS file         |  ![@import rule moved to top of CSS file][correct-css-import]  |
-|            **Result**: Imported font takes effect             |    ![Import font is now correctly applied][logo-text-fixed]    |
-
-[logo-text-problem]: docs/readme-images/incorrect-logo-text-font.png
-[incorrect-css-import]: docs/readme-images/incorrect-css-import.png
-[correct-css-import]: docs/readme-images/correct-css-import.png
-[logo-text-fixed]: docs/readme-images/correct-logo-text-font.png
-
-### Preventing "flash of unstyled text"
-
-This is not a bug per se but I think it could be distracting. By default, the imported CSS for the _Dynalight_ Google Font sets the value of `font-display` to `swap`. Although this is technically fine, it results in the behaviour whereby the logo text is immediately displayed in the serif fallback font because the custom font needs to be downloaded and then the text font is swapped for the downloaded one, i.e. _flash of unstyled text_.
-
-The property has instead been set to `fallback`. This means that the browser will initially hide the text and briefly wait for the custom font. If the font is taking too long to download, the browser will use the fallback serif font and change it to the custom font when available.
 
 ## GitHub Deployment
 
